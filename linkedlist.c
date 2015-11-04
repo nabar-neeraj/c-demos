@@ -7,18 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-struct ListNode {
-	struct ListNode *next;
-	int data;
-};
-
-struct ListNode* createNode(int);
-int getLength(struct ListNode *);
-void traverseList(struct ListNode *);
-void insertAtStart(struct ListNode**, int);
-void insertAtEnd(struct ListNode**,int);
-void insertAtPos(struct ListNode**,int,int);
+#include "linkedlist.h"
 
 void insertAtStart(struct ListNode** head,int data)
 {
@@ -94,29 +83,3 @@ void traverseList(struct ListNode *head) {
 	printf("\n");
 }
 
-int main() {
-	struct ListNode *n1, *n2, *n3;
-	struct ListNode *head;
-	n1 = createNode(1);
-	n2 = createNode(2);
-	n3 = createNode(3);
-
-	head = n1;
-	n1->next = n2;
-	n2->next = n3;
-	n3->next = NULL;
-	printf("Linked List length = %d\n", getLength(head));
-	traverseList(head);
-	insertAtStart(&head,50);
-	printf("Linked List length = %d\n", getLength(head));
-	traverseList(head);
-	insertAtEnd(&head,100);
-	printf("Linked List length = %d\n", getLength(head));
-	traverseList(head);
-
-	insertAtPos(&head,42,1);
-	traverseList(head);
-
-
-	return 0;
-}
