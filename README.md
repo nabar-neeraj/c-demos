@@ -5,6 +5,7 @@ This repo is to store all the c practice programs that I'll be writing.
 
 <<<<<<< HEAD
 ## Directory structure
+```
 src
 ¦---main.c
 ¦
@@ -19,3 +20,4 @@ src
 +---linkedlists
         linkedlist.c
         linkedlist.h
+```
