@@ -24,5 +24,8 @@ void insertAtPos(struct ListNode**,int,int);
 void delete(struct ListNode**,int);
 int search(struct ListNode*,int);
 int get(struct ListNode*,int);
+struct ListNode* reverse(struct ListNode*);
+int hasLoop(struct ListNode*);
+int getLoopStart(struct ListNode*);
 
 #endif /* LINKEDLIST_H_ */

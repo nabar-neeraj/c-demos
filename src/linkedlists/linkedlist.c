@@ -120,3 +120,59 @@ int get(struct ListNode* head,int pos) {
 	}
 	return ptr->data;
 }
+
+struct ListNode* reverse(struct ListNode* head) {
+	struct ListNode *curr,*next,*prev;
+	prev = NULL;
+	curr = head;
+
+	while(curr != NULL) {
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	head = prev;
+	return head;
+}
+
+int hasLoop(struct ListNode* head) {
+	struct ListNode *slowPtr,*fastPtr;
+	slowPtr = head;
+	fastPtr = head;
+	while(slowPtr != NULL && fastPtr != NULL) {
+		slowPtr = slowPtr->next;
+		fastPtr = (fastPtr->next)->next;
+		if(slowPtr == fastPtr) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int getLoopStart(struct ListNode* head) {
+	struct ListNode *slowPtr,*fastPtr;
+	int hasLoop = 0;
+//	First, find if list has a loop
+	slowPtr = head;
+	fastPtr = head;
+	while(slowPtr != NULL && fastPtr != NULL) {
+		slowPtr = slowPtr->next;
+		fastPtr = (fastPtr->next)->next;
+		if(slowPtr == fastPtr) {
+			hasLoop = 1;
+			break;
+		}
+	}
+	if(hasLoop) {
+		fastPtr = head;
+		int pos = 0;
+		while(slowPtr != fastPtr) {
+			slowPtr = slowPtr->next;
+			fastPtr = fastPtr->next;
+			pos++;
+		}
+		return pos;
+	}
+	return -1;
+}

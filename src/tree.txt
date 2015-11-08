@@ -1,0 +1,13 @@
+¦   main.c
+¦
++---arrays
+¦       arraydemos.c
+¦       arrptrdemo.c
+¦
++---basics
+¦       sizesof.c
+¦       sizesof.h
+¦
++---linkedlists
+        linkedlist.c
+        linkedlist.h
