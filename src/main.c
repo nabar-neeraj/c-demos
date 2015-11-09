@@ -10,34 +10,15 @@
 #include "basics/sizesof.h"
 
 int main() {
-//	pListNode n1, n2, n3,n4;
-//	pListNode head;
-//	n1 = createNode(1);
-//	n2 = createNode(2);
-//	n3 = createNode(3);
-//
-//	head = n1;
-//	n1->next = n2;
-//	n2->next = n3;
-//	n3->next = NULL;
-//
-//	traverseList(head);
-//	pListNode rev;
-//	rev = reverse(head);
-//	traverseList(rev);
 
-//	n4 = createNode(4);
-//	n3->next = n4;
-//	traverseList(head);
-//	n4->next = n3;
-//
-//	if(hasLoop(head))
-//		printf("The linked list now has a loop\n");
-//	else
-//		printf("The linked list does not have a loop\n");
-//
-//	printf("The linked list loop starts at position = %d\n",getLoopStart(head));
-//	arrptrdemo();
-//	stringdemos();
+//	int arr[] = {10,9,8,7,6,5,4,3,2,1};
+////	int arr[] = {5,4,3,2,1,6,7,10,8,9};
+//	int size = sizeof(arr)/sizeof(arr[0]);
+////	printf("Size of the array is %d\n",size);
+//	showArray(arr,size);
+//	bsort(arr,size);
+//	showArray(arr,size);
+//	filedemo();
+	prepdirdemo();
 	return 0;
 }
